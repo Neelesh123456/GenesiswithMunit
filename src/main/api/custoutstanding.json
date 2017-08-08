@@ -1,0 +1,11 @@
+{
+                "InVoiceNo": "123456789", 
+                "PostingDate": "010117", 
+                "DueDate": "010218",
+                "InvoiceAmount": "54000",
+                "BalanceAmount": "5432",
+                "Assignment": "true",
+                "Reference":"true",
+                "Fax":"1232",
+                "Email":"wjfbj@josd.com"
+               }

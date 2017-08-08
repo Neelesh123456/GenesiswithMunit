@@ -1,0 +1,16 @@
+{
+            "companyCode": "200"
+            "customerCode": "010117", 
+            "vendorCode": "010218",
+            "refInvNumber": "54000",
+            "invLineNo": "5432",
+            "invDate": "true",
+            "invType":"true",
+            "itemCode":"1232",3
+            "itemDescription":"hello",
+            "periodMonth":"1232",
+            "currency":"water",
+            "invoiceQty":"1232",
+            "netInvoiceAmountCust":"12345",
+            "netInvoiceAmountVend":"12345"
+           }

@@ -1,0 +1,9 @@
+ {
+       "properties": {
+          "ExchangeRate": {
+            "description": "The Exchange Rate  is",
+            "type": "string",
+            "required": true
+          }
+        }                  
+      }

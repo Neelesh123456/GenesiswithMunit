@@ -1,0 +1,175 @@
+#%RAML 1.0
+baseUri: https://mocksvc.mulesoft.com/mocks/0d6ee16a-89a9-4c4d-bb71-d14c6aa7f84c
+title: newproj
+version: v1,1
+schemas: 
+  CustomerCreditLimit: !include credentials.json
+     
+  CustomerExistance: !include existance.json
+     
+  CustomerOutstanding: !include  outstanding.json
+      
+  FinancialInvoice: !include invoice.json
+      
+  CustomerExchangeRates: !include exchangerates.json      
+    
+  Error : !include error.json
+      
+traits:
+    http-error-responses:
+      responses: 
+              400:
+                body: 
+                  application/json:
+                    schema: Error
+                    example: !include 400-error.json
+              403:
+                body: 
+                  application/json:
+                    schema: Error
+                    example: !include 403-error.json
+              404:
+                body: 
+                  application/json:
+                    schema: Error
+                    example: !include 404-error.json
+              405:
+                body: 
+                  application/json:
+                    schema: Error
+                    example: !include 405-error.json
+              406:
+                body: 
+                  application/json:
+                    schema: Error
+                    example: !include 406-error.json
+              415:
+                body: 
+                  application/json:
+                    schema: Error
+                    example: !include 415-error.json
+              500:
+                body: 
+                  application/json:
+                    schema: Error 
+                    example: !include 500-error.json
+        
+     
+/CustomerCreditLimit:
+  is: [http-error-responses]
+  get:
+    queryParameters:
+      SAPCustomerCode:
+        type: string
+        required: true
+      SAPCompanyCode:
+        type: string
+        required: true
+      instance:
+        enum: [credit] 
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include custcreditlimit.json
+              
+
+/CustomerExistence:
+  is: [http-error-responses]
+  get:
+    queryParameters:
+      SAPCustomerCode:
+        type: string
+        required: true
+      SAPCompanyCode:
+        type: string
+        required: true  
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include custexistance.json
+              
+/CustomerOutstanding:
+  is: [http-error-responses]
+  get:
+    queryParameters:
+      SAPCustomerCode:
+        type: string
+        required: true
+      SAPCompanyCode:
+        type: string
+        required: true
+      KeyDate:
+       type: string
+       required: true
+      instance:
+        enum: [outstanding]
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include custoutstanding.json
+               
+
+/FinancialInvoice:
+  is: [http-error-responses]
+  post:
+      body: 
+       application/json:
+         schema: FinancialInvoice
+           
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {"status":"true"
+                }
+              
+                
+
+/CustomerPayment:
+  is: [http-error-responses]
+  post:
+    body: 
+      application/json:
+        example: !include postcustpayment.json
+          
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include custpayment.json
+              
+            
+/CustomerExchangeRates:
+  is: [http-error-responses]
+  get:
+    queryParameters:
+      SAPTransactionDate:
+        type: string
+        required: true
+      SAPExchangeRateType:
+        type: string
+        required: true
+      SAPFromCurrency:
+        type: string
+        required: true
+      SAPToCurrency:
+        type: string
+        required: true
+      instance:
+        enum: [exchangeRates]
+        
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include custexchangerates.json
+               
+                
+            
+      
+    
+          

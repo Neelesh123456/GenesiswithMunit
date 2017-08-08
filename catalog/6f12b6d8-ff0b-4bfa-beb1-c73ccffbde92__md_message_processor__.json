@@ -1,0 +1,11 @@
+{
+    "inputMessageMetadata": {},
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "Web_Service_Consumer",
+            "typeId": "ZGen001CustExist"
+        }
+    },
+    "id": "6f12b6d8-ff0b-4bfa-beb1-c73ccffbde92",
+    "version": "5.2.0.0"
+}

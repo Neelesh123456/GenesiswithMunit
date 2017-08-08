@@ -1,0 +1,23 @@
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap-env:Header/>
+   <soap-env:Body>
+      <n0:ZGen001CustExistResponse xmlns:n0="urn:sap-com:document:sap:soap:functions:mc-style">
+         <ECustdet>
+            <Name1>Vision Solutions, Inc</Name1>
+            <HouseNum1/>
+            <StrSuppl1/>
+            <Street/>
+            <PostCode1>92618</PostCode1>
+            <City1>15300 Barranca Parkway,Irvine</City1>
+            <Country>USA</Country>
+            <Region>CA</Region>
+            <PoBox/>
+            <TelNumber/>
+            <FaxNumber/>
+            <SmtpAddr/>
+         </ECustdet>
+         <Message/>
+         <Status>TRUE</Status>
+      </n0:ZGen001CustExistResponse>
+   </soap-env:Body>
+</soap-env:Envelope>

@@ -1,0 +1,14 @@
+{
+             "companyCode": "123456789", 
+             "customerCode": "010117", 
+             "portalPaymentRefNo": "010218",
+             "refInvNo": "54000",
+             "paymentDesc": "5432",
+             "bankName": "true",
+            "paymentGatewayRefNo":"true",
+            "tranAmt":"1232",
+            "tranCurrency":"wjfbj@josd.com",
+            "tranatatus":"1232",
+            "transDate":"wjfbj@josd.com",
+            "userid":"1232"
+           }

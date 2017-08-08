@@ -1,0 +1,1 @@
+Could not find a transformer to transform "SimpleDataType{type=org.mule.module.xml.transformer.XmlToOutputHandler$1, mimeType='*/*', encoding='null'}" to "SimpleDataType{type=java.lang.String, mimeType='*/*', encoding='null'}". (org.mule.api.transformer.TransformerException).

@@ -1,0 +1,50 @@
+{
+       "properties": {
+          "ResponseStatusCode": {
+            "description": "The ResponseStatusCode is",
+            "type": "string",
+            "required": true
+          },
+          "companyCode": {
+            "description": "The CompanyCode is",
+            "type": "string",
+            "required": true
+          },
+          "InvoiceNo": {
+            "description": "InvoiceNo is",
+            "type": "string",
+            "required": true
+          },
+          "PostingDate": {
+            "description": "The Posting Date  is",
+            "type": "string",
+            "required": true
+          },
+          "DueDate": {
+            "description": "the DueDate is",
+            "type": "string",
+            "required": true
+          },
+          
+          "InvoiceAmount": {
+            "description": "The InvoiceAmount is",
+            "type": "string",
+            "required": true
+          },
+          "BalanceAmount": {
+            "description": "The BalanceAmount is",
+            "type": "string",
+            "required": true
+          },
+          "Assignment": {
+            "description": "The Assignment  is",
+            "type": "string",
+            "required": true
+          },
+          "Reference": {
+            "description": "The Reference is",
+            "type": "string",
+            "required": true
+          }
+        }                  
+      }

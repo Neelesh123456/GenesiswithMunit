@@ -1,0 +1,65 @@
+{
+       "properties": {
+          
+          "companyCode": {
+            "description": "The companyCode is",
+            "type": "string",
+            "required": true
+          },
+           "customerCode": {
+            "description": "The customerCode is",
+            "type": "string",
+            "required": true
+          },
+          "vendorCode": {
+            "description": "The vendorCode is",
+            "type": "string",
+            "required": true
+          },
+          "refInvNumber": {
+            "description": "The refInvNumber is",
+            "type": "string",
+            "required": true
+          },
+          "invLineNo": {
+            "description": "The refInvNumber is",
+            "type": "string",
+            "required": true
+          },
+          "itemCode": {
+            "description": "The refInvNumber is",
+            "type": "string",
+            "required": true
+          },
+          "itemDescription": {
+            "description": "The refInvNumber is",
+            "type": "string",
+            "required": true
+          },
+          "periodMonth": {
+            "description": "The refInvNumber is",
+            "type": "string",
+            "required": true
+          },
+          "currency": {
+            "description": "The refInvNumber is",
+            "type": "string",
+            "required": true
+          },
+          "invoiceQty": {
+            "description": "The refInvNumber is",
+            "type": "string",
+            "required": true
+          },
+          "netInvoiceAmountCust": {
+            "description": "The refInvNumber is",
+            "type": "string",
+            "required": true
+          },
+          "netInvoiceAmountCust": {
+            "description": "The refInvNumber is",
+            "type": "string",
+            "required": true
+          }
+        }                  
+      }

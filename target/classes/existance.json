@@ -1,0 +1,50 @@
+ {
+       "properties": {
+          "Name": {
+            "description": "The Name is",
+            "type": "string",
+            "required": true
+          },
+          "Street/HouseNo": {
+            "description": "The Street/HouseNo is",
+            "type": "string",
+            "required": true
+          },
+          "postalCodeCity": {
+            "description": "PostalCode/City is",
+            "type": "string",
+            "required": true
+          },
+          "Country": {
+            "description": "The Country  is",
+            "type": "string",
+            "required": true
+          },
+          "Region": {
+            "description": "the Region is",
+            "type": "string",
+            "required": true
+          },
+          
+          "POBox": {
+            "description": "The PoBox is",
+            "type": "string",
+            "required": true
+          },
+          "Telephone": {
+            "description": "The Telephone  is",
+            "type": "string",
+            "required": true
+          },
+          "MobilePhone": {
+            "description": "The MobilePhone  is",
+            "type": "string",
+            "required": true
+          },
+          "Fax": {
+            "description": "The Fax is",
+            "type": "string",
+            "required": true
+          }
+        }                  
+      }
