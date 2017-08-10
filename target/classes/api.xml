@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns:mulexml="http://www.mulesoft.org/schema/mule/xml" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:ws="http://www.mulesoft.org/schema/mule/ws" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:tls="http://www.mulesoft.org/schema/mule/tls" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/apikit http://www.mulesoft.org/schema/mule/apikit/current/mule-apikit.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/tls http://www.mulesoft.org/schema/mule/tls/current/mule-tls.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd">
+    <http:listener-config name="neelesh-httpListenerConfig" host="0.0.0.0" port="8084" doc:name="HTTP Listener Configuration"/>
+    <apikit:config name="neelesh-config" raml="neelesh.raml" consoleEnabled="false" doc:name="Router"/>
+    <flow name="neelesh-main">
+        <http:listener config-ref="neelesh-httpListenerConfig" path="/api/*" doc:name="HTTP"/>
+        <apikit:router config-ref="neelesh-config" doc:name="APIkit Router"/>
+        <exception-strategy ref="neelesh-apiKitGlobalExceptionMapping" doc:name="Reference Exception Strategy"/>
+    </flow>
+
+    <flow name="get:/CustomerCreditLimit:neelesh-config">
+        <flow-ref name="customer_creditlimit.xml" doc:name="customer_creditlimit.xml"/>
+
+    </flow>
+    <flow name="get:/CustomerExchangeRates:neelesh-config">
+        <set-payload value="{&#xA;                &quot;ExchangeRate&quot;: &quot;123456&quot;&#xA;                }" doc:name="Set Payload"/>
+    </flow>
+    <flow name="get:/CustomerExistence:neelesh-config">
+        <flow-ref name="customer_existence1" doc:name="customer_existence1"/>
+
+    </flow>
+    <flow name="get:/CustomerOutstanding:neelesh-config">
+        <set-payload value="{&#xA;                &quot;InVoiceNo&quot;: &quot;123456789&quot;, &#xA;                &quot;PostingDate&quot;: &quot;010117&quot;, &#xA;                &quot;DueDate&quot;: &quot;010218&quot;,&#xA;                &quot;InvoiceAmount&quot;: &quot;54000&quot;,&#xA;                &quot;BalanceAmount&quot;: &quot;5432&quot;,&#xA;                &quot;Assignment&quot;: &quot;true&quot;,&#xA;                &quot;Reference&quot;:&quot;true&quot;,&#xA;                &quot;Fax&quot;:&quot;1232&quot;,&#xA;                &quot;Email&quot;:&quot;wjfbj@josd.com&quot;&#xA;               }" doc:name="Set Payload"/>
+    </flow>
+    <flow name="post:/CustomerPayment:neelesh-config">
+        <set-payload value="{&#xA;               &quot;MessageResponse2&quot;:&quot;true&quot;,&#xA;               &quot;SAPDocumentNo2&quot;:&quot;123456&quot;&#xA;                  }" doc:name="Set Payload"/>
+    </flow>
+    <flow name="post:/FinancialInvoice:application/json:neelesh-config">
+        <set-payload value="{&quot;status&quot;:&quot;true&quot;&#xA;}" doc:name="Set Payload"/>
+    </flow>
+    <apikit:mapping-exception-strategy name="neelesh-apiKitGlobalExceptionMapping">
+        <apikit:mapping statusCode="404">
+            <apikit:exception value="org.mule.module.apikit.exception.NotFoundException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Resource not found&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+        <apikit:mapping statusCode="405">
+            <apikit:exception value="org.mule.module.apikit.exception.MethodNotAllowedException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Method not allowed&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+        <apikit:mapping statusCode="415">
+            <apikit:exception value="org.mule.module.apikit.exception.UnsupportedMediaTypeException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Unsupported media type&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+        <apikit:mapping statusCode="406">
+            <apikit:exception value="org.mule.module.apikit.exception.NotAcceptableException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Not acceptable&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+        <apikit:mapping statusCode="400">
+            <apikit:exception value="org.mule.module.apikit.exception.BadRequestException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Bad request&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+    </apikit:mapping-exception-strategy>
+
+</mule>

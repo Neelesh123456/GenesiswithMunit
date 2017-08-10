@@ -1,0 +1,11 @@
+{
+    "inputMessageMetadata": {},
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "creditlimitout"
+        }
+    },
+    "id": "3f7ace52-b935-4c0e-b04e-763dd1736805",
+    "version": "5.2.0.0"
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:ws="http://www.mulesoft.org/schema/mule/ws"
+	xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd">
+
+<flow name="customer_creditlimit.xml">
+        <logger message="#[payload]" level="INFO" doc:name="Logger"/>
+        <dw:transform-message metadata:id="0f90e399-834c-4b80-8460-71f302301dd7" doc:name="Transform Message">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+%namespace ns0 urn:sap-com:document:sap:soap:functions:mc-style
+---
+{
+	ns0#ZGen001CustCredit: {
+		Bukrs: inboundProperties."http.query.params".SAPCompanyCode,
+		Kunnr: inboundProperties."http.query.params".SAPCustomerCode
+	}
+}]]></dw:set-payload>
+        </dw:transform-message>
+        <byte-array-to-string-transformer mimeType="text/xml" doc:name="Byte Array to String"/>
+        <logger message="#[payload]" level="INFO" doc:name="Logger"/>
+        <ws:consumer config-ref="Web_Service_Consumer1" operation="ZGen001CustCredit" doc:name="Web Service Consumer"/>
+        <dw:transform-message metadata:id="3f7ace52-b935-4c0e-b04e-763dd1736805" doc:name="Transform Message">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+%namespace ns0 urn:sap-com:document:sap:soap:functions:mc-style
+---
+{
+	Avaicrlimit: payload.ns0#ZGen001CustCreditResponse.Avaicrlimit as :string,
+	Custhold: payload.ns0#ZGen001CustCreditResponse.Custhold,
+	Custstop: payload.ns0#ZGen001CustCreditResponse.Custstop,
+	Exposure: payload.ns0#ZGen001CustCreditResponse.Exposure as :string,
+	Message: payload.ns0#ZGen001CustCreditResponse.Message,
+	Overduerec: payload.ns0#ZGen001CustCreditResponse.Overduerec as :string,
+	Totalcrlimit: payload.ns0#ZGen001CustCreditResponse.Totalcrlimit as :string
+}]]></dw:set-payload>
+        </dw:transform-message>
+        <logger message="#[payload]  neelesh" level="INFO" doc:name="Logger"/>
+    </flow>
+
+
+
+
+</mule>
