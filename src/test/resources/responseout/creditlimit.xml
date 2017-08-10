@@ -1,0 +1,14 @@
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+   <env:Header/>
+   <env:Body>
+      <n0:ZGen001CustCreditResponse xmlns:n0="urn:sap-com:document:sap:soap:functions:mc-style">
+         <Avaicrlimit>0.0</Avaicrlimit>
+         <Custhold>0</Custhold>
+         <Custstop>0</Custstop>
+         <Exposure>0.0</Exposure>
+         <Message>Credit Limit for Customer 0000000521 in company code 1112 can't be determined</Message>
+         <Overduerec>0.0</Overduerec>
+         <Totalcrlimit>0.0</Totalcrlimit>
+      </n0:ZGen001CustCreditResponse>
+   </env:Body>
+</env:Envelope>

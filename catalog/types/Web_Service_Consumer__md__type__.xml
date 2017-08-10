@@ -101,8 +101,84 @@
         </rootElement>
         <schemas class="org.mule.common.metadata.StringBasedSchemaProvider">
           <schemas>
-            <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;xsd:schema xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:http=&quot;http://schemas.xmlsoap.org/wsdl/http/&quot; xmlns:mime=&quot;http://schemas.xmlsoap.org/wsdl/mime/&quot; xmlns:n1=&quot;urn:sap-com:document:sap:rfc:functions&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:tns=&quot;urn:sap-com:document:sap:soap:functions:mc-style&quot; xmlns:wsdl=&quot;http://schemas.xmlsoap.org/wsdl/&quot; xmlns:wsoap12=&quot;http://schemas.xmlsoap.org/wsdl/soap12/&quot; xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot; xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot; attributeFormDefault=&quot;qualified&quot; targetNamespace=&quot;urn:sap-com:document:sap:rfc:functions&quot;&gt;&lt;xsd:simpleType name=&quot;char10&quot;&gt;&lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&lt;xsd:maxLength value=&quot;10&quot;/&gt;&lt;/xsd:restriction&gt;&lt;/xsd:simpleType&gt;&lt;xsd:simpleType name=&quot;char220&quot;&gt;&lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&lt;xsd:maxLength value=&quot;220&quot;/&gt;&lt;/xsd:restriction&gt;&lt;/xsd:simpleType&gt;&lt;xsd:simpleType name=&quot;char241&quot;&gt;&lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&lt;xsd:maxLength value=&quot;241&quot;/&gt;&lt;/xsd:restriction&gt;&lt;/xsd:simpleType&gt;&lt;xsd:simpleType name=&quot;char3&quot;&gt;&lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&lt;xsd:maxLength value=&quot;3&quot;/&gt;&lt;/xsd:restriction&gt;&lt;/xsd:simpleType&gt;&lt;xsd:simpleType name=&quot;char30&quot;&gt;&lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&lt;xsd:maxLength value=&quot;30&quot;/&gt;&lt;/xsd:restriction&gt;&lt;/xsd:simpleType&gt;&lt;xsd:simpleType name=&quot;char4&quot;&gt;&lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&lt;xsd:maxLength value=&quot;4&quot;/&gt;&lt;/xsd:restriction&gt;&lt;/xsd:simpleType&gt;&lt;xsd:simpleType name=&quot;char40&quot;&gt;&lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&lt;xsd:maxLength value=&quot;40&quot;/&gt;&lt;/xsd:restriction&gt;&lt;/xsd:simpleType&gt;&lt;xsd:simpleType name=&quot;char60&quot;&gt;&lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&lt;xsd:maxLength value=&quot;60&quot;/&gt;&lt;/xsd:restriction&gt;&lt;/xsd:simpleType&gt;&lt;/xsd:schema&gt;</string>
-            <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;xsd:schema xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:http=&quot;http://schemas.xmlsoap.org/wsdl/http/&quot; xmlns:mime=&quot;http://schemas.xmlsoap.org/wsdl/mime/&quot; xmlns:n0=&quot;urn:sap-com:document:sap:rfc:functions&quot; xmlns:n1=&quot;urn:sap-com:document:sap:rfc:functions&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:tns=&quot;urn:sap-com:document:sap:soap:functions:mc-style&quot; xmlns:wsdl=&quot;http://schemas.xmlsoap.org/wsdl/&quot; xmlns:wsoap12=&quot;http://schemas.xmlsoap.org/wsdl/soap12/&quot; xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot; xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot; attributeFormDefault=&quot;qualified&quot; targetNamespace=&quot;urn:sap-com:document:sap:soap:functions:mc-style&quot;&gt;&lt;xsd:import namespace=&quot;urn:sap-com:document:sap:rfc:functions&quot;/&gt;&lt;xsd:complexType name=&quot;Zgen001Custdet&quot;&gt;&lt;xsd:sequence&gt;&lt;xsd:element name=&quot;Name1&quot; type=&quot;n0:char40&quot;/&gt;&lt;xsd:element name=&quot;HouseNum1&quot; type=&quot;n0:char10&quot;/&gt;&lt;xsd:element name=&quot;StrSuppl1&quot; type=&quot;n0:char40&quot;/&gt;&lt;xsd:element name=&quot;Street&quot; type=&quot;n0:char60&quot;/&gt;&lt;xsd:element name=&quot;PostCode1&quot; type=&quot;n0:char10&quot;/&gt;&lt;xsd:element name=&quot;City1&quot; type=&quot;n0:char40&quot;/&gt;&lt;xsd:element name=&quot;Country&quot; type=&quot;n0:char40&quot;/&gt;&lt;xsd:element name=&quot;Region&quot; type=&quot;n0:char3&quot;/&gt;&lt;xsd:element name=&quot;PoBox&quot; type=&quot;n0:char10&quot;/&gt;&lt;xsd:element name=&quot;TelNumber&quot; type=&quot;n0:char30&quot;/&gt;&lt;xsd:element name=&quot;FaxNumber&quot; type=&quot;n0:char30&quot;/&gt;&lt;xsd:element name=&quot;SmtpAddr&quot; type=&quot;n0:char241&quot;/&gt;&lt;/xsd:sequence&gt;&lt;/xsd:complexType&gt;&lt;xsd:element name=&quot;ZGen001CustExist&quot;&gt;&lt;xsd:complexType&gt;&lt;xsd:sequence&gt;&lt;xsd:element name=&quot;Bukrs&quot; type=&quot;n0:char4&quot;/&gt;&lt;xsd:element name=&quot;Kunnr&quot; type=&quot;n0:char10&quot;/&gt;&lt;/xsd:sequence&gt;&lt;/xsd:complexType&gt;&lt;/xsd:element&gt;&lt;xsd:element name=&quot;ZGen001CustExistResponse&quot;&gt;&lt;xsd:complexType&gt;&lt;xsd:sequence&gt;&lt;xsd:element name=&quot;ECustdet&quot; type=&quot;tns:Zgen001Custdet&quot;/&gt;&lt;xsd:element name=&quot;Message&quot; type=&quot;n0:char220&quot;/&gt;&lt;xsd:element name=&quot;Status&quot; type=&quot;n0:char10&quot;/&gt;&lt;/xsd:sequence&gt;&lt;/xsd:complexType&gt;&lt;/xsd:element&gt;&lt;/xsd:schema&gt;</string>
+            <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;xsd:schema xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:http=&quot;http://schemas.xmlsoap.org/wsdl/http/&quot; xmlns:mime=&quot;http://schemas.xmlsoap.org/wsdl/mime/&quot; xmlns:n1=&quot;urn:sap-com:document:sap:rfc:functions&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:tns=&quot;urn:sap-com:document:sap:soap:functions:mc-style&quot; xmlns:wsdl=&quot;http://schemas.xmlsoap.org/wsdl/&quot; xmlns:wsoap12=&quot;http://schemas.xmlsoap.org/wsdl/soap12/&quot; xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot; xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot; attributeFormDefault=&quot;qualified&quot; targetNamespace=&quot;urn:sap-com:document:sap:rfc:functions&quot;&gt;&#xd;
+         &lt;xsd:simpleType name=&quot;char10&quot;&gt;&#xd;
+            &lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&#xd;
+               &lt;xsd:maxLength value=&quot;10&quot;/&gt;&#xd;
+            &lt;/xsd:restriction&gt;&#xd;
+         &lt;/xsd:simpleType&gt;&#xd;
+         &lt;xsd:simpleType name=&quot;char220&quot;&gt;&#xd;
+            &lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&#xd;
+               &lt;xsd:maxLength value=&quot;220&quot;/&gt;&#xd;
+            &lt;/xsd:restriction&gt;&#xd;
+         &lt;/xsd:simpleType&gt;&#xd;
+         &lt;xsd:simpleType name=&quot;char241&quot;&gt;&#xd;
+            &lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&#xd;
+               &lt;xsd:maxLength value=&quot;241&quot;/&gt;&#xd;
+            &lt;/xsd:restriction&gt;&#xd;
+         &lt;/xsd:simpleType&gt;&#xd;
+         &lt;xsd:simpleType name=&quot;char3&quot;&gt;&#xd;
+            &lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&#xd;
+               &lt;xsd:maxLength value=&quot;3&quot;/&gt;&#xd;
+            &lt;/xsd:restriction&gt;&#xd;
+         &lt;/xsd:simpleType&gt;&#xd;
+         &lt;xsd:simpleType name=&quot;char30&quot;&gt;&#xd;
+            &lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&#xd;
+               &lt;xsd:maxLength value=&quot;30&quot;/&gt;&#xd;
+            &lt;/xsd:restriction&gt;&#xd;
+         &lt;/xsd:simpleType&gt;&#xd;
+         &lt;xsd:simpleType name=&quot;char4&quot;&gt;&#xd;
+            &lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&#xd;
+               &lt;xsd:maxLength value=&quot;4&quot;/&gt;&#xd;
+            &lt;/xsd:restriction&gt;&#xd;
+         &lt;/xsd:simpleType&gt;&#xd;
+         &lt;xsd:simpleType name=&quot;char40&quot;&gt;&#xd;
+            &lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&#xd;
+               &lt;xsd:maxLength value=&quot;40&quot;/&gt;&#xd;
+            &lt;/xsd:restriction&gt;&#xd;
+         &lt;/xsd:simpleType&gt;&#xd;
+         &lt;xsd:simpleType name=&quot;char60&quot;&gt;&#xd;
+            &lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&#xd;
+               &lt;xsd:maxLength value=&quot;60&quot;/&gt;&#xd;
+            &lt;/xsd:restriction&gt;&#xd;
+         &lt;/xsd:simpleType&gt;&#xd;
+      &lt;/xsd:schema&gt;</string>
+            <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;xsd:schema xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:http=&quot;http://schemas.xmlsoap.org/wsdl/http/&quot; xmlns:mime=&quot;http://schemas.xmlsoap.org/wsdl/mime/&quot; xmlns:n0=&quot;urn:sap-com:document:sap:rfc:functions&quot; xmlns:n1=&quot;urn:sap-com:document:sap:rfc:functions&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:tns=&quot;urn:sap-com:document:sap:soap:functions:mc-style&quot; xmlns:wsdl=&quot;http://schemas.xmlsoap.org/wsdl/&quot; xmlns:wsoap12=&quot;http://schemas.xmlsoap.org/wsdl/soap12/&quot; xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot; xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot; attributeFormDefault=&quot;qualified&quot; targetNamespace=&quot;urn:sap-com:document:sap:soap:functions:mc-style&quot;&gt;&#xd;
+         &lt;xsd:import namespace=&quot;urn:sap-com:document:sap:rfc:functions&quot;/&gt;&#xd;
+         &lt;xsd:complexType name=&quot;Zgen001Custdet&quot;&gt;&#xd;
+            &lt;xsd:sequence&gt;&#xd;
+               &lt;xsd:element name=&quot;Name1&quot; type=&quot;n0:char40&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;HouseNum1&quot; type=&quot;n0:char10&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;StrSuppl1&quot; type=&quot;n0:char40&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;Street&quot; type=&quot;n0:char60&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;PostCode1&quot; type=&quot;n0:char10&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;City1&quot; type=&quot;n0:char40&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;Country&quot; type=&quot;n0:char40&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;Region&quot; type=&quot;n0:char3&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;PoBox&quot; type=&quot;n0:char10&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;TelNumber&quot; type=&quot;n0:char30&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;FaxNumber&quot; type=&quot;n0:char30&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;SmtpAddr&quot; type=&quot;n0:char241&quot;/&gt;&#xd;
+            &lt;/xsd:sequence&gt;&#xd;
+         &lt;/xsd:complexType&gt;&#xd;
+         &lt;xsd:element name=&quot;ZGen001CustExist&quot;&gt;&#xd;
+            &lt;xsd:complexType&gt;&#xd;
+               &lt;xsd:sequence&gt;&#xd;
+                  &lt;xsd:element name=&quot;Bukrs&quot; type=&quot;n0:char4&quot;/&gt;&#xd;
+                  &lt;xsd:element name=&quot;Kunnr&quot; type=&quot;n0:char10&quot;/&gt;&#xd;
+               &lt;/xsd:sequence&gt;&#xd;
+            &lt;/xsd:complexType&gt;&#xd;
+         &lt;/xsd:element&gt;&#xd;
+         &lt;xsd:element name=&quot;ZGen001CustExistResponse&quot;&gt;&#xd;
+            &lt;xsd:complexType&gt;&#xd;
+               &lt;xsd:sequence&gt;&#xd;
+                  &lt;xsd:element name=&quot;ECustdet&quot; type=&quot;tns:Zgen001Custdet&quot;/&gt;&#xd;
+                  &lt;xsd:element name=&quot;Message&quot; type=&quot;n0:char220&quot;/&gt;&#xd;
+                  &lt;xsd:element name=&quot;Status&quot; type=&quot;n0:char10&quot;/&gt;&#xd;
+               &lt;/xsd:sequence&gt;&#xd;
+            &lt;/xsd:complexType&gt;&#xd;
+         &lt;/xsd:element&gt;&#xd;
+      &lt;/xsd:schema&gt;</string>
           </schemas>
           <encoding>windows-1252</encoding>
           <baseUri>file:/C:/Users/Neelesh.Panigrahi/Downloads/z_gen001_CustExistence.wsdl</baseUri>
@@ -499,8 +575,84 @@
               </rootElement>
               <schemas class="org.mule.common.metadata.StringBasedSchemaProvider">
                 <schemas>
-                  <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;xsd:schema xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:http=&quot;http://schemas.xmlsoap.org/wsdl/http/&quot; xmlns:mime=&quot;http://schemas.xmlsoap.org/wsdl/mime/&quot; xmlns:n1=&quot;urn:sap-com:document:sap:rfc:functions&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:tns=&quot;urn:sap-com:document:sap:soap:functions:mc-style&quot; xmlns:wsdl=&quot;http://schemas.xmlsoap.org/wsdl/&quot; xmlns:wsoap12=&quot;http://schemas.xmlsoap.org/wsdl/soap12/&quot; xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot; xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot; attributeFormDefault=&quot;qualified&quot; targetNamespace=&quot;urn:sap-com:document:sap:rfc:functions&quot;&gt;&lt;xsd:simpleType name=&quot;char10&quot;&gt;&lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&lt;xsd:maxLength value=&quot;10&quot;/&gt;&lt;/xsd:restriction&gt;&lt;/xsd:simpleType&gt;&lt;xsd:simpleType name=&quot;char220&quot;&gt;&lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&lt;xsd:maxLength value=&quot;220&quot;/&gt;&lt;/xsd:restriction&gt;&lt;/xsd:simpleType&gt;&lt;xsd:simpleType name=&quot;char241&quot;&gt;&lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&lt;xsd:maxLength value=&quot;241&quot;/&gt;&lt;/xsd:restriction&gt;&lt;/xsd:simpleType&gt;&lt;xsd:simpleType name=&quot;char3&quot;&gt;&lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&lt;xsd:maxLength value=&quot;3&quot;/&gt;&lt;/xsd:restriction&gt;&lt;/xsd:simpleType&gt;&lt;xsd:simpleType name=&quot;char30&quot;&gt;&lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&lt;xsd:maxLength value=&quot;30&quot;/&gt;&lt;/xsd:restriction&gt;&lt;/xsd:simpleType&gt;&lt;xsd:simpleType name=&quot;char4&quot;&gt;&lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&lt;xsd:maxLength value=&quot;4&quot;/&gt;&lt;/xsd:restriction&gt;&lt;/xsd:simpleType&gt;&lt;xsd:simpleType name=&quot;char40&quot;&gt;&lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&lt;xsd:maxLength value=&quot;40&quot;/&gt;&lt;/xsd:restriction&gt;&lt;/xsd:simpleType&gt;&lt;xsd:simpleType name=&quot;char60&quot;&gt;&lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&lt;xsd:maxLength value=&quot;60&quot;/&gt;&lt;/xsd:restriction&gt;&lt;/xsd:simpleType&gt;&lt;/xsd:schema&gt;</string>
-                  <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;xsd:schema xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:http=&quot;http://schemas.xmlsoap.org/wsdl/http/&quot; xmlns:mime=&quot;http://schemas.xmlsoap.org/wsdl/mime/&quot; xmlns:n0=&quot;urn:sap-com:document:sap:rfc:functions&quot; xmlns:n1=&quot;urn:sap-com:document:sap:rfc:functions&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:tns=&quot;urn:sap-com:document:sap:soap:functions:mc-style&quot; xmlns:wsdl=&quot;http://schemas.xmlsoap.org/wsdl/&quot; xmlns:wsoap12=&quot;http://schemas.xmlsoap.org/wsdl/soap12/&quot; xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot; xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot; attributeFormDefault=&quot;qualified&quot; targetNamespace=&quot;urn:sap-com:document:sap:soap:functions:mc-style&quot;&gt;&lt;xsd:import namespace=&quot;urn:sap-com:document:sap:rfc:functions&quot;/&gt;&lt;xsd:complexType name=&quot;Zgen001Custdet&quot;&gt;&lt;xsd:sequence&gt;&lt;xsd:element name=&quot;Name1&quot; type=&quot;n0:char40&quot;/&gt;&lt;xsd:element name=&quot;HouseNum1&quot; type=&quot;n0:char10&quot;/&gt;&lt;xsd:element name=&quot;StrSuppl1&quot; type=&quot;n0:char40&quot;/&gt;&lt;xsd:element name=&quot;Street&quot; type=&quot;n0:char60&quot;/&gt;&lt;xsd:element name=&quot;PostCode1&quot; type=&quot;n0:char10&quot;/&gt;&lt;xsd:element name=&quot;City1&quot; type=&quot;n0:char40&quot;/&gt;&lt;xsd:element name=&quot;Country&quot; type=&quot;n0:char40&quot;/&gt;&lt;xsd:element name=&quot;Region&quot; type=&quot;n0:char3&quot;/&gt;&lt;xsd:element name=&quot;PoBox&quot; type=&quot;n0:char10&quot;/&gt;&lt;xsd:element name=&quot;TelNumber&quot; type=&quot;n0:char30&quot;/&gt;&lt;xsd:element name=&quot;FaxNumber&quot; type=&quot;n0:char30&quot;/&gt;&lt;xsd:element name=&quot;SmtpAddr&quot; type=&quot;n0:char241&quot;/&gt;&lt;/xsd:sequence&gt;&lt;/xsd:complexType&gt;&lt;xsd:element name=&quot;ZGen001CustExist&quot;&gt;&lt;xsd:complexType&gt;&lt;xsd:sequence&gt;&lt;xsd:element name=&quot;Bukrs&quot; type=&quot;n0:char4&quot;/&gt;&lt;xsd:element name=&quot;Kunnr&quot; type=&quot;n0:char10&quot;/&gt;&lt;/xsd:sequence&gt;&lt;/xsd:complexType&gt;&lt;/xsd:element&gt;&lt;xsd:element name=&quot;ZGen001CustExistResponse&quot;&gt;&lt;xsd:complexType&gt;&lt;xsd:sequence&gt;&lt;xsd:element name=&quot;ECustdet&quot; type=&quot;tns:Zgen001Custdet&quot;/&gt;&lt;xsd:element name=&quot;Message&quot; type=&quot;n0:char220&quot;/&gt;&lt;xsd:element name=&quot;Status&quot; type=&quot;n0:char10&quot;/&gt;&lt;/xsd:sequence&gt;&lt;/xsd:complexType&gt;&lt;/xsd:element&gt;&lt;/xsd:schema&gt;</string>
+                  <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;xsd:schema xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:http=&quot;http://schemas.xmlsoap.org/wsdl/http/&quot; xmlns:mime=&quot;http://schemas.xmlsoap.org/wsdl/mime/&quot; xmlns:n1=&quot;urn:sap-com:document:sap:rfc:functions&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:tns=&quot;urn:sap-com:document:sap:soap:functions:mc-style&quot; xmlns:wsdl=&quot;http://schemas.xmlsoap.org/wsdl/&quot; xmlns:wsoap12=&quot;http://schemas.xmlsoap.org/wsdl/soap12/&quot; xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot; xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot; attributeFormDefault=&quot;qualified&quot; targetNamespace=&quot;urn:sap-com:document:sap:rfc:functions&quot;&gt;&#xd;
+         &lt;xsd:simpleType name=&quot;char10&quot;&gt;&#xd;
+            &lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&#xd;
+               &lt;xsd:maxLength value=&quot;10&quot;/&gt;&#xd;
+            &lt;/xsd:restriction&gt;&#xd;
+         &lt;/xsd:simpleType&gt;&#xd;
+         &lt;xsd:simpleType name=&quot;char220&quot;&gt;&#xd;
+            &lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&#xd;
+               &lt;xsd:maxLength value=&quot;220&quot;/&gt;&#xd;
+            &lt;/xsd:restriction&gt;&#xd;
+         &lt;/xsd:simpleType&gt;&#xd;
+         &lt;xsd:simpleType name=&quot;char241&quot;&gt;&#xd;
+            &lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&#xd;
+               &lt;xsd:maxLength value=&quot;241&quot;/&gt;&#xd;
+            &lt;/xsd:restriction&gt;&#xd;
+         &lt;/xsd:simpleType&gt;&#xd;
+         &lt;xsd:simpleType name=&quot;char3&quot;&gt;&#xd;
+            &lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&#xd;
+               &lt;xsd:maxLength value=&quot;3&quot;/&gt;&#xd;
+            &lt;/xsd:restriction&gt;&#xd;
+         &lt;/xsd:simpleType&gt;&#xd;
+         &lt;xsd:simpleType name=&quot;char30&quot;&gt;&#xd;
+            &lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&#xd;
+               &lt;xsd:maxLength value=&quot;30&quot;/&gt;&#xd;
+            &lt;/xsd:restriction&gt;&#xd;
+         &lt;/xsd:simpleType&gt;&#xd;
+         &lt;xsd:simpleType name=&quot;char4&quot;&gt;&#xd;
+            &lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&#xd;
+               &lt;xsd:maxLength value=&quot;4&quot;/&gt;&#xd;
+            &lt;/xsd:restriction&gt;&#xd;
+         &lt;/xsd:simpleType&gt;&#xd;
+         &lt;xsd:simpleType name=&quot;char40&quot;&gt;&#xd;
+            &lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&#xd;
+               &lt;xsd:maxLength value=&quot;40&quot;/&gt;&#xd;
+            &lt;/xsd:restriction&gt;&#xd;
+         &lt;/xsd:simpleType&gt;&#xd;
+         &lt;xsd:simpleType name=&quot;char60&quot;&gt;&#xd;
+            &lt;xsd:restriction base=&quot;xsd:string&quot;&gt;&#xd;
+               &lt;xsd:maxLength value=&quot;60&quot;/&gt;&#xd;
+            &lt;/xsd:restriction&gt;&#xd;
+         &lt;/xsd:simpleType&gt;&#xd;
+      &lt;/xsd:schema&gt;</string>
+                  <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;xsd:schema xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:http=&quot;http://schemas.xmlsoap.org/wsdl/http/&quot; xmlns:mime=&quot;http://schemas.xmlsoap.org/wsdl/mime/&quot; xmlns:n0=&quot;urn:sap-com:document:sap:rfc:functions&quot; xmlns:n1=&quot;urn:sap-com:document:sap:rfc:functions&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:tns=&quot;urn:sap-com:document:sap:soap:functions:mc-style&quot; xmlns:wsdl=&quot;http://schemas.xmlsoap.org/wsdl/&quot; xmlns:wsoap12=&quot;http://schemas.xmlsoap.org/wsdl/soap12/&quot; xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot; xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot; attributeFormDefault=&quot;qualified&quot; targetNamespace=&quot;urn:sap-com:document:sap:soap:functions:mc-style&quot;&gt;&#xd;
+         &lt;xsd:import namespace=&quot;urn:sap-com:document:sap:rfc:functions&quot;/&gt;&#xd;
+         &lt;xsd:complexType name=&quot;Zgen001Custdet&quot;&gt;&#xd;
+            &lt;xsd:sequence&gt;&#xd;
+               &lt;xsd:element name=&quot;Name1&quot; type=&quot;n0:char40&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;HouseNum1&quot; type=&quot;n0:char10&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;StrSuppl1&quot; type=&quot;n0:char40&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;Street&quot; type=&quot;n0:char60&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;PostCode1&quot; type=&quot;n0:char10&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;City1&quot; type=&quot;n0:char40&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;Country&quot; type=&quot;n0:char40&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;Region&quot; type=&quot;n0:char3&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;PoBox&quot; type=&quot;n0:char10&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;TelNumber&quot; type=&quot;n0:char30&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;FaxNumber&quot; type=&quot;n0:char30&quot;/&gt;&#xd;
+               &lt;xsd:element name=&quot;SmtpAddr&quot; type=&quot;n0:char241&quot;/&gt;&#xd;
+            &lt;/xsd:sequence&gt;&#xd;
+         &lt;/xsd:complexType&gt;&#xd;
+         &lt;xsd:element name=&quot;ZGen001CustExist&quot;&gt;&#xd;
+            &lt;xsd:complexType&gt;&#xd;
+               &lt;xsd:sequence&gt;&#xd;
+                  &lt;xsd:element name=&quot;Bukrs&quot; type=&quot;n0:char4&quot;/&gt;&#xd;
+                  &lt;xsd:element name=&quot;Kunnr&quot; type=&quot;n0:char10&quot;/&gt;&#xd;
+               &lt;/xsd:sequence&gt;&#xd;
+            &lt;/xsd:complexType&gt;&#xd;
+         &lt;/xsd:element&gt;&#xd;
+         &lt;xsd:element name=&quot;ZGen001CustExistResponse&quot;&gt;&#xd;
+            &lt;xsd:complexType&gt;&#xd;
+               &lt;xsd:sequence&gt;&#xd;
+                  &lt;xsd:element name=&quot;ECustdet&quot; type=&quot;tns:Zgen001Custdet&quot;/&gt;&#xd;
+                  &lt;xsd:element name=&quot;Message&quot; type=&quot;n0:char220&quot;/&gt;&#xd;
+                  &lt;xsd:element name=&quot;Status&quot; type=&quot;n0:char10&quot;/&gt;&#xd;
+               &lt;/xsd:sequence&gt;&#xd;
+            &lt;/xsd:complexType&gt;&#xd;
+         &lt;/xsd:element&gt;&#xd;
+      &lt;/xsd:schema&gt;</string>
                 </schemas>
                 <encoding reference="../../../../../../../entry/org.mule.common.metadata.DefaultXmlMetaDataModel/schemas/encoding"/>
                 <baseUri>file:/C:/Users/Neelesh.Panigrahi/Downloads/z_gen001_CustExistence.wsdl</baseUri>

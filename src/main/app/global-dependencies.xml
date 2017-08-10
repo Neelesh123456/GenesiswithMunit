@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ws="http://www.mulesoft.org/schema/mule/ws"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" version="EE-3.8.3"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd 
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+
+ <ws:consumer-config name="Web_Service_Consumer" service="Z_GEN001_WS" port="Z_GEN001_BIND" serviceAddress="https://rawecdev.redington.dxb:8001/sap/bc/srt/rfc/sap/z_gen001_cust_exist_wsd/130/z_gen001_ws/z_gen001_bind" connectorConfig="HTTP_Request_Configuration1" wsdlLocation="C:\Users\Neelesh.Panigrahi\Downloads\z_gen001_CustExistence.wsdl" doc:name="Web Service Consumer"/>
+    <http:request-config name="HTTP_Request_Configuration" protocol="HTTP" doc:name="HTTP Request Configuration"  host="localhost" >
+        <http:basic-authentication username="EDI-BATCHUSR" password="P@ssw0rd "/>
+    </http:request-config>
+    <ws:consumer-config name="Web_Service_Consumer1" service="Z_GEN002_WS" port="Z_GEN002_BIND" serviceAddress="https://rawecdev.redington.dxb:8001/sap/bc/srt/rfc/sap/z_gen001_cust_credit_wsd/130/z_gen002_ws/z_gen002_bind" connectorConfig="HTTP_Request_Configuration2" wsdlLocation="C:\Users\Neelesh.Panigrahi\Desktop\z_gen002_bind.wsdl" doc:name="Web Service Consumer"/>
+    <http:request-config name="HTTP_Request_Configuration1" protocol="HTTP" doc:name="HTTP Request Configuration">
+        <http:basic-authentication username="EDI-BATCHUSR" password="P@ssw0rd "/>
+    </http:request-config>
+    <http:request-config name="HTTP_Request_Configuration2" protocol="HTTPS" doc:name="HTTP Request Configuration">
+        <http:basic-authentication username="EDI-BATCHUSR" password="P@ssw0rd "/>
+    </http:request-config>
+</mule>

@@ -10,10 +10,6 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
 http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd">
     <http:listener-config name="neelesh-httpListenerConfig" host="0.0.0.0" port="8084" doc:name="HTTP Listener Configuration"/>
     <apikit:config name="neelesh-config" raml="neelesh.raml" consoleEnabled="false" doc:name="Router"/>
-    <ws:consumer-config name="Web_Service_Consumer" service="Z_GEN001_WS" port="Z_GEN001_BIND" serviceAddress="https://rawecdev.redington.dxb:8001/sap/bc/srt/rfc/sap/z_gen001_cust_exist_wsd/130/z_gen001_ws/z_gen001_bind" connectorConfig="HTTP_Request_Configuration" wsdlLocation="C:\Users\Neelesh.Panigrahi\Downloads\z_gen001_CustExistence.wsdl" doc:name="Web Service Consumer"/>
-    <http:request-config name="HTTP_Request_Configuration" protocol="HTTP" doc:name="HTTP Request Configuration"  host="localhost" >
-        <http:basic-authentication username="EDI-BATCHUSR" password="P@ssw0rd "/>
-    </http:request-config>
     <flow name="neelesh-main">
         <http:listener config-ref="neelesh-httpListenerConfig" path="/api/*" doc:name="HTTP"/>
         <apikit:router config-ref="neelesh-config" doc:name="APIkit Router"/>
@@ -21,60 +17,16 @@ http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/
     </flow>
 
     <flow name="get:/CustomerCreditLimit:neelesh-config">
-        <set-payload value="{&#xA;               &quot;CreditLimit&quot;: &quot;100000&quot;, &#xA;                &quot;AvailableLimit&quot;: &quot;4000&quot;, &#xA;                &quot;Outstanding&quot;: &quot;40000&quot;,&#xA;                &quot;OverDue&quot;: &quot;54000&quot;,&#xA;                &quot;CreditOrderHoldFlag&quot;: &quot;true&quot;,&#xA;                &quot;CreditStopFlag&quot;: &quot;true&quot;&#xA;              }" doc:name="Set Payload"/>
+        <flow-ref name="customer_creditlimit.xml" doc:name="customer_creditlimit.xml"/>
+
     </flow>
     <flow name="get:/CustomerExchangeRates:neelesh-config">
         <set-payload value="{&#xA;                &quot;ExchangeRate&quot;: &quot;123456&quot;&#xA;                }" doc:name="Set Payload"/>
     </flow>
     <flow name="get:/CustomerExistence:neelesh-config">
-        <flow-ref name="neeleshSub_Flow" doc:name="neeleshSub_Flow"/>
+        <flow-ref name="customer_existence1" doc:name="customer_existence1"/>
 
     </flow>
-    <sub-flow name="neeleshSub_Flow">
-        <logger message="========= Message is ======= #[message]" level="INFO" doc:name="Logger"/>
-        <dw:transform-message doc:name="Transform Message" metadata:id="a46ccd7e-1378-415e-a1b6-c8c2a6ead43e">
-            <dw:set-payload><![CDATA[%dw 1.0
-%output application/xml
-%namespace ns0 urn:sap-com:document:sap:soap:functions:mc-style
----
-{
-	ns0#ZGen001CustExist: {
-		Bukrs: inboundProperties."http.query.params".SAPCompanyCode,
-		Kunnr: inboundProperties."http.query.params".SAPCustomerCode
-	}
-}]]></dw:set-payload>
-        </dw:transform-message>
-        <byte-array-to-string-transformer mimeType="text/xml" doc:name="Byte Array to String"/>
-        <logger message="==== Logger Before Consumer ====  #[payload]" level="INFO" doc:name="Logger"/>
-        <ws:consumer config-ref="Web_Service_Consumer" operation="ZGen001CustExist" doc:name="WebServiceConsumer"/>
-        <logger message="========== After WS Consumer  ======== #[payload]" level="INFO" doc:name="Logger"/>
-        <set-payload value="#[payload]" doc:name="Set Payload" mimeType="application/xml"/>
-        <dw:transform-message metadata:id="8dbd9a34-5a83-497a-b6fd-1f1075573b7a" doc:name="Transform Message">
-            <dw:set-payload><![CDATA[%dw 1.0
-%output application/json
-%namespace ns0 urn:sap-com:document:sap:soap:functions:mc-style
----
-{
-	Name1: payload.ns0#ZGen001CustExistResponse.ECustdet.Name1,
-	HouseNum1: payload.ns0#ZGen001CustExistResponse.ECustdet.HouseNum1,
-	StrSuppl1: payload.ns0#ZGen001CustExistResponse.ECustdet.StrSuppl1,
-	Street: payload.ns0#ZGen001CustExistResponse.ECustdet.Street,
-	PostCode1: payload.ns0#ZGen001CustExistResponse.ECustdet.PostCode1,
-	City1: payload.ns0#ZGen001CustExistResponse.ECustdet.City1,
-	Country: payload.ns0#ZGen001CustExistResponse.ECustdet.Country,
-	Region: payload.ns0#ZGen001CustExistResponse.ECustdet.Region,
-	PoBox: payload.ns0#ZGen001CustExistResponse.ECustdet.PoBox,
-	TelNumber: payload.ns0#ZGen001CustExistResponse.ECustdet.TelNumber,
-	FaxNumber: payload.ns0#ZGen001CustExistResponse.ECustdet.FaxNumber,
-	SmtpAddr: payload.ns0#ZGen001CustExistResponse.ECustdet.SmtpAddr,
-	status: payload.ns0#ZGen001CustExistResponse.Status,
-	message: payload.ns0#ZGen001CustExistResponse.Message
-}]]></dw:set-payload>
-        </dw:transform-message>
-        <byte-array-to-string-transformer doc:name="Byte Array to String"/>
-        <logger message="#[payload]--shravani" level="INFO" doc:name="Logger"/>
-
-    </sub-flow>
     <flow name="get:/CustomerOutstanding:neelesh-config">
         <set-payload value="{&#xA;                &quot;InVoiceNo&quot;: &quot;123456789&quot;, &#xA;                &quot;PostingDate&quot;: &quot;010117&quot;, &#xA;                &quot;DueDate&quot;: &quot;010218&quot;,&#xA;                &quot;InvoiceAmount&quot;: &quot;54000&quot;,&#xA;                &quot;BalanceAmount&quot;: &quot;5432&quot;,&#xA;                &quot;Assignment&quot;: &quot;true&quot;,&#xA;                &quot;Reference&quot;:&quot;true&quot;,&#xA;                &quot;Fax&quot;:&quot;1232&quot;,&#xA;                &quot;Email&quot;:&quot;wjfbj@josd.com&quot;&#xA;               }" doc:name="Set Payload"/>
     </flow>

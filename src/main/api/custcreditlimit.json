@@ -1,8 +1,9 @@
 {
-               "CreditLimit": "100000", 
-                "AvailableLimit": "4000", 
-                "Outstanding": "40000",
-                "OverDue": "54000",
-                "CreditOrderHoldFlag": "true",
-                "CreditStopFlag": "true"
+               "Avaicrlimit": "100000", 
+                "Custhold": "4000", 
+                "Custstop": "40000",
+                "Exposure": "54000",
+                "Message": "true",
+                "Overduerec": "true",
+                "Totalcrlimit":"1234"
               }

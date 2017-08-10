@@ -1,8 +1,9 @@
 {
-               "CreditLimit": "100000", 
-                "AvailableLimit": "4000", 
-                "Outstanding": "40000",
-                "OverDue": "54000",
-                "CreditOrderHoldFlag": "true",
-                "CreditStopFlag": "true"
-              }
+    "Avaicrlimit": "0.0",
+    "Custhold": "0",
+    "Custstop": "0",
+    "Exposure": "0.0",
+    "Message": "Credit Limit for Customer 0000000516 in company code 1110 can't be determined",
+    "Overduerec": "0.0",
+    "Totalcrlimit": "0.0"
+}
